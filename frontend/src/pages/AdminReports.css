@@ -1,0 +1,225 @@
+/* AdminReports.css — reuses Dashboard design tokens */
+
+.admin-root {
+  min-height: 100vh;
+  background: var(--bg-primary, #0d0d0d);
+  color: var(--text-primary, #f0f0f0);
+  font-family: 'Inter', sans-serif;
+}
+
+.admin-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+/* Retrain button */
+.retrain-btn {
+  background: #da291c;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  letter-spacing: 0.02em;
+}
+.retrain-btn:hover:not(:disabled) { background: #b52016; }
+.retrain-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.retrain-msg {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-left: 3px solid #22c55e;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  color: #a0a0a0;
+  margin-bottom: 1.5rem;
+}
+
+/* Report sections */
+.report-section {
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.report-section h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin: 0 0 1.25rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+}
+
+/* Two-column layout for Risk + Loan Type */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 700px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+/* Bar chart */
+.bar-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.bar-label {
+  width: 110px;
+  font-size: 0.82rem;
+  color: #a0a0a0;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.bar-track {
+  flex: 1;
+  background: #222;
+  border-radius: 4px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.6s ease;
+}
+
+.bar-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  width: 32px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* Amount grid */
+.amount-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.amount-card {
+  background: #1a1a1a;
+  border: 1px solid #2e2e2e;
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.amount-label {
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+
+.amount-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #e0e0e0;
+}
+
+.amount-value.green { color: #22c55e; }
+
+/* Reuse navbar & stats from Dashboard.css */
+.nav-link {
+  color: #a0a0a0;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+.nav-link:hover { color: #da291c; }
+
+/* ── Monthly approvals chart ─────────────────────────────────── */
+.monthly-legend {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--muted, #888);
+}
+
+.monthly-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  min-height: 160px;
+}
+
+.monthly-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 52px;
+}
+
+.monthly-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 120px;
+}
+
+.monthly-bar-seg {
+  width: 12px;
+  border-radius: 3px 3px 0 0;
+  min-height: 2px;
+  transition: opacity 0.2s;
+}
+.monthly-bar-seg:hover { opacity: 0.8; }
+
+.monthly-label {
+  font-size: 0.72rem;
+  color: var(--muted, #888);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.monthly-total {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary, #f0f0f0);
+}

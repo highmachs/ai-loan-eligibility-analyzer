@@ -1,0 +1,147 @@
+.ch-root {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.ch-container {
+  max-width: 1040px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ch-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.ch-section h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ── Profile grid ─────────────────────── */
+.ch-profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.ch-profile-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.ch-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.ch-value {
+  font-size: 0.97rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* ── Total row ────────────────────────── */
+.ch-total-row {
+  margin-top: 1rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.ch-total-row strong {
+  color: var(--text);
+}
+
+/* ── Stat cards (B13: classes used by CustomerHistory but defined here) ─── */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border, #2a2a3e);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-total  { border-color: #4f4f6e; }
+.stat-approved { border-color: #22c55e44; }
+.stat-rejected { border-color: #ef444444; }
+.stat-pending  { border-color: #f59e0b44; }
+
+.stat-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted, #888);
+  margin-bottom: 0.4rem;
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text, #f0f0f0);
+}
+
+/* ── Shared table + badge classes ────────────────────────────────────────── */
+.apps-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+.apps-table th, .apps-table td {
+  padding: 0.65rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border, #2a2a3e);
+}
+.apps-table th {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted, #888);
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+.badge-approved { background: #22c55e22; color: #22c55e; }
+.badge-rejected { background: #ef444422; color: #ef4444; }
+.badge-pending  { background: #f59e0b22; color: #f59e0b; }
+
+.link-btn {
+  color: #818cf8;
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.link-btn:hover { text-decoration: underline; }
+
+.empty-text {
+  color: var(--muted, #888);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem 0;
+}

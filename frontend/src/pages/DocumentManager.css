@@ -1,0 +1,96 @@
+.doc-root {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.doc-container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.doc-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.75rem;
+}
+
+.doc-section h2 {
+  margin: 0 0 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+/* ── Add form ─────────────────────────────── */
+.doc-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 520px;
+}
+
+.doc-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.doc-form-row label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.doc-form-row select,
+.doc-form-row input {
+  background: var(--input-bg, #1e1e2e);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.95rem;
+  padding: 0.6rem 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.doc-form-row select:focus,
+.doc-form-row input:focus {
+  border-color: var(--accent);
+}
+
+.doc-success {
+  color: #22c55e;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ── Table overrides ──────────────────────── */
+.doc-number {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.doc-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.doc-action-btn {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+}
+
+.doc-actioned {
+  color: var(--muted);
+}
